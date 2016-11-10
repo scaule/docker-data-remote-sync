@@ -41,5 +41,7 @@ On server side you have to create a folder for all container backups and a folde
 Warning : 
 * (Security) To prevent server password on config file we only use authentification by ssh key.
 
+Contributor : 
+* @masev 
 Special thanks for backup script from quadeare : 
 https://github.com/quadeare/docker_volumes_backup/blob/master/backup-docker.sh 
