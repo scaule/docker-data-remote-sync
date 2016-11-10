@@ -3,14 +3,17 @@ getLastDumpFileName() {
 }
 
 applyRestore() {
-	echo "use on restore $COMPOSE_PREFIX$1$COMPOSE_SUFFIX $2"
-	./restore-docker.sh $COMPOSE_PREFIX$1$COMPOSE_SUFFIX $2
+	echo "use on restore $COMPOSE_PREFIX$1$COMPOSE_SUFFIX $2" 
+        ./restore-docker.sh $COMPOSE_PREFIX$1$COMPOSE_SUFFIX $2
 }
 
 getDump() {
 	echo "downloading dump for $1"
 	scp -P$SERVER_PORT $SERVER_USER@$SERVER_NAME:$SERVER_DIRECTORY$1/$2 .
-	applyRestore $1 $2
+        if [ "$RESTORE_DATA" = true ]
+        then
+            applyRestore $1 $2
+        fi
 	mkdir -p "./data_current_file"
 	echo $2 > "./data_current_file/$service"
 }
