@@ -25,11 +25,13 @@ Exemple:
 
 # Remote sync with fresh data
 
-We provide a tool for download and restore automaticly your data for your container. 
-To use this script you have to set your server informations and container on docker_data_remote_sync.cfg.
+We provide a tool for download and restore automaticly your data for your containers. 
+To use this script you have to set your server informations and containers on docker_data_remote_sync.cfg.
 
 When configuration is ok, you only have to execute docker_data_remote_sync.sh and he will connect to your server and looking for the last backup for each containers on config file.
 
+Warning : 
+-> (Security) To prevent server password on config file we only use authentification by ssh key.
 
 Special thanks for backup script from quadeare : 
 https://github.com/quadeare/docker_volumes_backup/blob/master/backup-docker.sh 
