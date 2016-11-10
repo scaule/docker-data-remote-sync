@@ -30,6 +30,14 @@ To use this script you have to set your server informations and containers on do
 
 When configuration is ok, you only have to execute docker_data_remote_sync.sh and he will connect to your server and looking for the last backup for each containers on config file.
 
+If you want to only download and not restore you can set the RESTORE_DATA parameter to false. 
+
+On server side you have to create a folder for all container backups and a folder on it for each container with container name for exemple :
+
+* /here/server/directory/container1
+* /here/server/directory/container2
+* /here/server/directory/container3
+
 Warning : 
 * (Security) To prevent server password on config file we only use authentification by ssh key.
 
