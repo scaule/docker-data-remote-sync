@@ -4,7 +4,7 @@ getLastDumpFileName() {
 
 applyRestore() {
 	echo "use on restore $COMPOSE_PREFIX$1$COMPOSE_SUFFIX $2"
-	#./restore-docker.sh $COMPOSE_PREFIX$1$COMPOSE_SUFFIX $2
+	./restore-docker.sh $COMPOSE_PREFIX$1$COMPOSE_SUFFIX $2
 }
 
 getDump() {
