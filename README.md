@@ -42,6 +42,7 @@ Warning :
 * (Security) To prevent server password on config file we only use authentification by ssh key.
 
 Contributor : 
-* @masev 
+* https://github.com/masev
+
 Special thanks for backup script from quadeare : 
 https://github.com/quadeare/docker_volumes_backup/blob/master/backup-docker.sh 
